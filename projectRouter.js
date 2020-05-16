@@ -29,7 +29,7 @@ router.get('/:id', validateProjectId, (req,res)=>{
 })
 
 //edit project with current id
-router.put('/:id', validateEdit, validateProjectId, (req,res)=>{
+router.put('/:id', validateProject, validateProjectId, (req,res)=>{
     const changes = req.body;
     projectDB.update(req.params.id, changes)
     .then(project=>{
@@ -107,13 +107,5 @@ function validateAction(req,res,next){
         next();
     }
 }
-function validateEdit (req,res,next){
-    if(!req.body){
-        res.status(400).json({message:"missing updated project information"})
-    }else if(!req.body.name || !req.body.description || !req.body.completed){
-        res.status(400).json({message:" project update needs a change in name, description or completion state"})
-    } else{
-        next();
-    }
-}
+
 module.exports = router;
