@@ -16,19 +16,19 @@ The Minimum Viable Product must be completed in three hours.
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add your _Team Lead_ as collaborator on Github.
-- [ ] Clone your forked version of the Repository.
-- [ ] Create a new Branch on the clone: git checkout -b `firstName-lastName`.
-- [ ] Implement the project on this Branch, committing changes regularly.
-- [ ] Push commits: git push origin `firstName-lastName`.
+- [x] Create a forked copy of this project.
+- [x] Add your _Team Lead_ as collaborator on Github.
+- [x] Clone your forked version of the Repository.
+- [x] Create a new Branch on the clone: git checkout -b `firstName-lastName`.
+- [x] Implement the project on this Branch, committing changes regularly.
+- [x] Push commits: git push origin `firstName-lastName`.
 
 Follow these steps for completing your project.
 
-- [ ] Submit a Pull-Request to merge `firstName-lastName` Branch into master on **your fork, don't make Pull Requests against Lambda's repository**.
-- [ ] Please don't merge your own pull request.
-- [ ] Add your _Team Lead_ as a Reviewer on the Pull-request
-- [ ] Your _Team Lead_ will count the challenge as done by merging the branch into _master_.
+- [x] Submit a Pull-Request to merge `firstName-lastName` Branch into master on **your fork, don't make Pull Requests against Lambda's repository**.
+- [x] Please don't merge your own pull request.
+- [x] Add your _Team Lead_ as a Reviewer on the Pull-request
+- [x] Your _Team Lead_ will count the challenge as done by merging the branch into _master_.
 
 ## Commits
 
@@ -38,20 +38,31 @@ Commit your code regularly and use descriptive messages. This helps both you (in
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your Team Lead.
 
-- [ ] Mention two parts of Express that you learned about this week.
+- [x] Mention two parts of Express that you learned about this week.
 
-- [ ] Describe Middleware?
+    Express is a framework that adds flexability and ease of use to node.js. This lets us more easily build servers and APIs with node.
+    Express can be used to manage middleware in our APIs and servers.
 
-- [ ] Describe a Resource?
+- [x] Describe Middleware?
 
-- [ ] What can the API return to help clients know if a request was successful?
+        Middleware is a term used to describe functions that get run when another function is called to run without the caller of the function having to make the explicit call to run the middleware function. They can be built-in, third-party, or custom to the application.
 
-- [ ] How can we partition our application into sub-applications?
+- [x] Describe a Resource?
+
+        A resource is everything in the scope of a RESTful web API. A resource is something that is accessable through a single URL. It can use http methods to act on it to be used in a CRUD web application. 
+
+- [x] What can the API return to help clients know if a request was successful?
+
+        The API can return a success code, usually with a 2xx denotation, along with either, the requested thing. If the request was alterative in nature, then along with the success code, a copy of the json that was submitted can be returned.
+
+- [x] How can we partition our application into sub-applications?
+
+        We can use express routers to partition our monolithic web applicatoin. Through routing and middleware we can take our large app, and devide it into smaller pieces that can more easily be digested by either someone maintaining the code or an end user that needs to see the code to develop something else that utilizes our application.
 
 ## Minimum Viable Product
 
-- [ ] Configure an _npm script_ named _"server"_ that will execute your code using _nodemon_. Make _nodemon_ be a development time dependency only, it shouldn't be deployed to production.
-- [ ] Configure an _npm script_ named _"start"_ that will execute your code using _node_.
+- [x] Configure an _npm script_ named _"server"_ that will execute your code using _nodemon_. Make _nodemon_ be a development time dependency only, it shouldn't be deployed to production.
+- [x] Configure an _npm script_ named _"start"_ that will execute your code using _node_.
 
 Design and build the necessary endpoints to:
 
